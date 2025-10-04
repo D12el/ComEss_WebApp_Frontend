@@ -1,6 +1,8 @@
 # bugcatch-frontend
 
-A simple frontend server built with Express.js, serving static files from the public/ directory.
+Frontend server for the ComEss WebApp project.
+
+This service serves static files via Express.js and requires the backend service (ComEss_WebApp_Backend) to be running in development.
 
 # Features
 
