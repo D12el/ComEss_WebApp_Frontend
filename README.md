@@ -1,7 +1,6 @@
 # bugcatch-frontend
 
 The frontend server for the BugCatch web game.
-It serves the game’s static files via Express.js, making it lightweight, easy to run locally, and simple to deploy on any Node.js hosting platform.
 
 # Features
 
