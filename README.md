@@ -1,16 +1,17 @@
 # bugcatch-frontend
 
-Frontend server for the ComEss WebApp project.
+The frontend server for the BugCatch web game.
+It serves the game’s static files via Express.js, making it lightweight, easy to run locally, and simple to deploy on any Node.js hosting platform.
 
-This service serves static files via Express.js and requires the backend service (ComEss_WebApp_Backend) to be running in development.
+# Features
 
-- Features
+Frontend static file hosting via Express.js
 
-Static file hosting with Express
+Specifically built for the BugCatch web game
 
-Ready for deployment or local development
+Simple and lightweight configuration
 
-Lightweight configuration
+Ready for both local development and deployment
 
 # Installation
 
@@ -36,8 +37,4 @@ Static files will be served from the public/ directory.
 
 # Development Notes
 
-Place your frontend build/static files in the public/ folder (e.g., index.html, CSS, JS).
-
-Update PORT in server.js if you need a different port.
-
-Ensure firewall rules or cloud provider allow external access if deploying online.
+This service serves static files via Express.js and requires the backend service (ComEss_WebApp_Backend) to be running in development.
