@@ -4,7 +4,7 @@ Frontend server for the ComEss WebApp project.
 
 This service serves static files via Express.js and requires the backend service (ComEss_WebApp_Backend) to be running in development.
 
-# Features
+- Features
 
 Static file hosting with Express
 
