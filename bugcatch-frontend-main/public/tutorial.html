@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Catch</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body onload=GotoFirstPage()>
+
+    <main class="flex flex-col width-full height-full padding-all-5 items-center">
+
+        <script>
+            let previousPage = null;
+
+            function GotoFirstPage(){
+                try {
+                    previousPage.style.display = "none";
+                } catch (error) {
+                    ;
+                }
+                const firstPage = document.getElementById("first-page");
+                firstPage.style.display = "block";
+                previousPage = firstPage;
+            }
+
+            function GotoSecondPage(){
+                try {
+                    previousPage.style.display = "none";
+                } catch (error) {
+                    ;
+                }
+                const secondPage = document.getElementById("second-page");
+                secondPage.style.display = "block";
+                previousPage = secondPage;
+            }
+
+            function GotoThirdPage(){
+                try {
+                    previousPage.style.display = "none";
+                } catch (error) {
+                    ;
+                }
+                const thirdPage = document.getElementById("third-page");
+                thirdPage.style.display = "block";
+                previousPage = thirdPage;
+            }
+
+            function GotoFourthPage(){
+                try {
+                    previousPage.style.display = "none";
+                } catch (error) {
+                    ;
+                }
+                const fourthPage = document.getElementById("fourth-page");
+                fourthPage.style.display = "block";
+                previousPage = fourthPage;
+            }
+
+        </script>
+        
+        
+        
+    <main class="flex flex-col width-full height-full padding-all-5 items-center">
+        <h1 class="font-luckiest text-black text-3xl weight-700">Bug Catch</h1>
+        <div class="flex flex-col width-80 tablet:width-180 items-start justify-center gap-5">
+            <a href="index.html" class="">
+                <div class="margin-top-5 height-fit background-white rounded-bg padding-all-2">
+                    <img src="images/arrow-uturn-left.svg" alt="" width="30" height="30" class="">
+                </div>
+            </a>
+        </div>
+        
+        <div class="flex flex-row width-full items-center justify-center gap-5">
+
+
+            <div class="flex flex-col width-80 tablet:width-180 height-100 tablet:height-40 background-white margin-top-5 rounded-bg border shadow padding-all-3">
+                <p class="text-lg weight-700">Gameplay Tutorial</p>
+                <div id="first-page" class="flex flex-col width-full height-full margin-top-3 padding-all-5" style="display: none;">
+                    <p class="text-xl weight-500 text-center">Welcome to Bug Catch</p>
+                    <p class="text-sm tablet:text-lg weight-300 text-center margin-top-5">Bug Catch is a web-based online game which aims to increase player click speed in the form of catching a bug. </p>
+                    <p class="text-sm tablet:text-lg weight-300 text-center margin-top-3">Players have to click the bugs that appear on the screen as fast as possible in order to receive the highest possible score. </p>
+                    <p class="text-sm tablet:text-lg weight-300 text-center margin-top-3">This website is a group final project of Computer Engineering Essentials class (Class of 2023), Chulalongkorn University. </p>
+
+
+                    
+                </div>
+                <div id="second-page" class="flex flex-col width-full height-full margin-top-3 padding-all-5" style="display: none;">
+                    <p class="text-xl weight-500 text-center">The beginning of your journey</p>
+                    <p class="text-sm tablet:text-lg weight-300 text-center margin-top-5">First thing first, you have to come up with your username. Please note that this will be displayed on the leaderboard if you manage to reach top 20.</p>
+                    <p class="text-sm tablet:text-lg weight-300 text-center margin-top-3">Next, select your avatar of your choices.</p>
+                    <p class="text-sm tablet:text-lg weight-300 text-center margin-top-3">Finally, get ready to catch'em all !</p>
+                </div>
+                <div id="third-page" class="flex flex-col width-full height-full margin-top-3 padding-all-5" style="display: none;">
+                    <p class="text-xl weight-500 text-center">Catching the bug</p>
+                    <p class="text-sm tablet:text-lg weight-300 text-center margin-top-5">The main objective of the game is to catch as many bugs as possible in a limited time.</p>
+                    <p class="text-sm tablet:text-lg weight-300 text-center margin-top-3">The more score you received, more difficult the game will be. Also, You can click on a mystery box</p>
+                    <p class="text-sm tablet:text-lg weight-300 text-center margin-top-3">which will give you random effects, namely: increases/decreases bug size, x1.5 score multiplier, or bug starting moving which will last temporary.</p>
+
+                </div>
+                <div id="fourth-page" class="flex flex-col width-full height-full margin-top-3 padding-all-5" style="display: none;">
+                    <p class="text-xl weight-500 text-center">Let's compete</p>
+                    <p class="text-sm tablet:text-lg weight-300 text-center margin-top-5">20 players with the highest score will have their name displayed in the hall of fame on the <a href="leaderboard.html"><span class="weight-500">leaderboard.</span></a></p>
+                    <p class="text-sm tablet:text-lg weight-300 text-center margin-top-3">Try your hardest to be honored, or if you already are, then be proud!</p>
+                    <p class="text-sm tablet:text-lg weight-300 text-center margin-top-3">Have fun playing :D</p>
+                </div>
+            </div>  
+            
+
+        </div>
+
+        <div class="flex flex-row width-40 tablet:width-60 height-10 gap-1 margin-top-5">
+            <div style="cursor: pointer" class="flex flex-col items-center justify-center shadow width-10 tablet:width-15 height-10 background-white border rounded-bg" onclick=GotoFirstPage()>1</div>
+            <div style="cursor: pointer" class="flex flex-col items-center justify-center shadow width-10 tablet:width-15 height-10 background-white border rounded-bg" onclick=GotoSecondPage()>2</div>
+            <div style="cursor: pointer" class="flex flex-col items-center justify-center shadow width-10 tablet:width-15 height-10 background-white border rounded-bg" onclick=GotoThirdPage()>3</div>
+            <div style="cursor: pointer" class="flex flex-col items-center justify-center shadow width-10 tablet:width-15 height-10 background-white border rounded-bg" onclick=GotoFourthPage()>4</div>
+        </div>
+        
+    
+    
+    
+    
+    </main>
+
+    </body>
+</html>

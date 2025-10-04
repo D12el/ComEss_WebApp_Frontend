@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Catch</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+
+    <main class="flex flex-col width-full height-full padding-all-5 items-center">
+        
+        
+        
+        <h1 class="font-luckiest text-black text-3xl weight-700 margin-top-5">Bug Catch</h1>
+        <div></div>
+        <div class="flex flex-col width-80 tablet:width-180 items-start justify-center gap-5">
+            <a href="index.html" class="">
+                <div class="margin-top-5 height-fit background-white rounded-bg padding-all-2">
+                    <img src="images/arrow-uturn-left.svg" alt="" width="30" height="30" class="">
+                </div>
+            </a>
+        </div>
+
+            <div class="flex flex-col width-80 tablet:width-180 height-120 background-white margin-top-5 rounded-bg border shadow padding-all-3">
+                <div class="flex flex-row width-fit height-fit gap-1 items-center">
+                    <img src="images/trophy.svg" alt="" class="">
+                    <h2 class="text-lg tablet:text-xl weight-500">Leaderboard</h2>
+                </div>
+                
+             <div class="margin-top-5 flex flex-wrap flex-row width-full gap-3 justify-center scroll-y" id="leaderboard-container">
+   
+            
+             </div>
+            </div> 
+
+            
+
+
+
+        </div>
+        
+    
+    
+    
+    
+    </main>
+
+      
+<script type="module">
+    import {fetchAndDrawLeaderboard} from "./script/main.js"
+    fetchAndDrawLeaderboard()
+</script>
+</body>
+</html>

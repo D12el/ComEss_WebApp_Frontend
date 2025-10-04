@@ -1,0 +1,890 @@
+
+
+/* 
+Please READ ME
+
+1. This CSS is inspired by Tailwind CSS. 
+Technically, this is a subset of its features which contents necessary features
+you will really need
+
+2. One class here was intended to represent one CSS property,
+unlike the traditional CSS scripting conducted in our class
+
+3. You can add your own class if you would like to do so
+(There are few exceptions though to maintain project consistency e.g. font size)
+
+4. Breakpoint is setting properties depending on user viewport size
+To demonstrate,
+
+tablet:PROPERTY_A -> PROPERTY_A will be used when the viewport size is >= tablet size.
+Please note that this also includes PC as well.
+
+pc:PROPERTY_B -> PROPERTY_A will be used when the viewport size is >= PC size.
+
+Currently, only width, height, flex/hidden, and font size properties
+are capable of using this feature
+
+
+5. At any point, if you get stuck or need help, please FEEL FREE to contact me.
+As I understand and empathize your difficulty or reading someone else code ;-;
+
+6. Also, if you found any bugs or would like to request new features/properties,
+feel free to let me know.
+
+GOOD LUCK !
+- Tontoey
+
+*/
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&family=Assistant:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+/* Explanation: Importing font from Google Font. We'll use Anuphan font for our project */
+
+
+
+/* CSS RESET for the sake of simplicity (You don't have to understand this) */
+a {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+  }
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+h1,h2,h3 {
+    font-weight: 100;
+}
+
+
+body {
+    background-image: url("images/background.jpg");
+}
+
+body, html {
+    font-family: "Anuphan", sans-serif;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    background-color: #f2f2f2;
+    border: 0px;
+    padding: 8px;
+    text-align: center;
+}
+td{
+    padding: 4px;
+    text-align: center;
+}
+#leaderboard-container tr:nth-child(even):not(:nth-child(2)),
+#leaderboard-container-mobile tr:nth-child(even):not(:nth-child(2)) {
+    background-color: #f2f2f2;
+}
+
+.font-luckiest {
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+/* Phaser Game Container */
+/* Explanation: Feel free to modify*/
+#gameContainer {
+    /* width: 800px;
+    height: 600px; */
+    width: 100%;
+    height: 100%;
+}
+
+/* WIDTH */
+/* Explanation: Feel free to add your own width size classes */
+
+.width-4 {
+    width: 1rem;
+}
+.width-5 {
+    width: 1.25rem;
+}
+
+.width-6 {
+    width: 1.5rem;
+}
+.width-7 {
+    width: 1.75rem;
+}
+
+.width-8 {
+    width: 2rem;
+}
+.width-9 {
+    width: 2.25rem;
+}
+.width-10 {
+    width: 2.5rem;
+}
+.width-11 {
+    width: 2.75rem;
+}
+.width-12 {
+    width: 3rem;
+}
+.width-13 {
+    width: 3.25rem;
+}
+.width-14 {
+    width: 3.5rem;
+}
+.width-15 {
+    width: 3.75rem;
+}
+
+.width-16 {
+    width: 4rem;
+}
+.width-17 {
+    width: 4.25rem;
+}
+
+.width-18 {
+    width: 4.5rem;
+}
+
+.width-19 {
+    width: 4.75rem;
+}
+
+.width-20 {
+    width: 5rem;
+}
+
+.width-28{
+    width: 7rem;
+}
+
+.width-40 {
+    width: 10rem;
+}
+
+.width-60 {
+    width: 15rem;
+}
+
+.width-80 {
+    width: 20rem;
+}
+
+.width-100 {
+    width: 25rem;
+}
+
+.width-120 {
+    width: 30rem;
+}
+
+.width-160{
+    width: 40rem;
+}
+
+.width-fit {
+    width: fit-content;
+}
+/* Explanation: Element width depends on the size of its contents */
+
+.width-full {
+    width: 100%;
+}
+/* Explanation: Element width will be as large as possible */
+
+@media (min-width: 768px) {
+    .tablet\:width-180 {
+        width: 45rem;
+    }
+
+    .tablet\:width-120 {
+        width: 30rem;
+    }
+
+    .tablet\:width-28{
+        width: 7rem;
+    }
+}
+/* Explanation: Breakpoint of the width (Feel free to add/modify) */
+
+
+
+/* HEIGHT */
+/* Explanation: Feel free to add your own height size classes */
+
+.height-4 {
+    height: 1rem;
+}
+.height-5 {
+    height: 1.25rem;
+}
+.height-6 {
+    height: 1.5rem;
+}
+.height-7 {
+    height: 1.75rem;
+}
+
+.height-8 {
+    height: 2rem;
+}
+.height-9 {
+    height: 2.25rem;
+}
+.height-10 {
+    height: 2.5rem;
+}
+.height-11 {
+    height: 2.75rem;
+}
+.height-12 {
+    height: 3rem;
+}
+.height-13 {
+    height: 3.25rem;
+}
+.height-14 {
+    height: 3.5rem;
+}
+.height-15 {
+    height: 3.75rem;
+}
+
+.height-16 {
+    height: 4rem;
+}
+.height-17 {
+    height: 4.25rem;
+}
+
+.height-18 {
+    height: 4.5rem;
+}
+
+.height-19 {
+    height: 4.75rem;
+}
+
+.height-20 {
+    height: 5rem;
+}
+
+.height-28 {
+    height: 7rem;
+}
+
+.height-40 {
+    height: 10rem;
+}
+
+.height-60 {
+    height: 15rem;
+}
+
+.height-80 {
+    height: 20rem;
+}
+
+.height-90 {
+    height: 22.5rem;
+}
+
+.height-100 {
+    height: 25rem;
+}
+
+.height-120 {
+    height: 30rem;
+}
+
+.height-fit {
+    height: fit-content;
+}
+/* Explanation: Element height depends on the size of its contents */
+
+
+.height-full {
+    height: 100vh;
+}
+/* Explanation: Element height will be as large as possible */
+
+@media (min-width: 768px) {
+    .tablet\:height-120 {
+        height: 40rem;
+    }
+
+    .tablet\:height-28{
+        height: 7rem;
+    }
+
+    .tablet\:height-20{
+        height: 5rem;
+    }
+
+    .tablet\:height-fit{
+        height: fit-content;
+    }
+}
+/* Explanation: Breakpoint of the height (Feel free to add/modify) */
+
+
+
+/* FLEX */
+/* Explanation: Flexible container box (Try searching "CSS Flexbox") */
+
+.hidden {
+    display: none;
+}
+/* Explanation: The element is hidden */
+
+.flex {
+    display: -webkit-box;
+    display: flex;
+}
+/* Explanation: The element is a flexbox */
+
+
+@media (min-width: 768px) {
+    .tablet\:hidden {
+        display: none;
+    }
+    .tablet\:flex {
+        display: -webkit-box;
+        display: flex;
+    }
+}
+/* Explanation: A hidden/flexbox breakpoint (Feel free to add/modify) */
+
+
+@media (min-width: 1025px) {
+    .pc\:hidden {
+        display: none;
+    }
+    .pc\:flex {
+        display: -webkit-box;
+        display: flex;
+    }
+}
+/* Explanation: A hidden/flexbox breakpoint (Feel free to add/modify) */
+
+
+.flex-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+}
+/* Explanation: The main axis of a flexbox is HORIZONTAL i.e, contents are 
+put in order from left to right */
+
+
+.flex-col {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+}
+/* Explanation: The main axis of a flexbox is VERTICAL i.e, contents are 
+put in order from top to bottom */
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+/* Explanation: Wrap the contents to make sure they don't exceed set sizes */
+
+
+.justify-center {
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+/* Explanation: Alignment of the main axis is set to be centered */
+
+
+.justify-start {
+    justify-content: flex-start;
+}
+/* Explanation: Alignment of the main axis is set to be top-aligned / left-aligned */
+
+
+.justify-end {
+    justify-content: flex-end;
+}
+/* Explanation: Alignment of the main axis is set to be bottom-aligned / right-aligned */
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    -webkit-box-align: center;
+    align-items: center;
+}
+/* Explanation: Alignment of the other axis is set to be centered */
+
+
+.items-start {
+    align-items: flex-start;
+}
+/* Explanation: Alignment of the other axis is set to be top-aligned / left-aligned */
+
+
+.items-end {
+    align-items: flex-end;
+}
+/* Explanation: Alignment of the other axis is set to be bottom-aligned / right-aligned */
+
+
+
+.gap-1 {
+    gap: 0.25rem;
+}
+
+.gap-2 {
+    gap: 0.5rem;
+}
+
+.gap-3 {
+    gap: 0.75rem;
+}
+
+.gap-4 {
+    gap: 1rem;
+}
+
+.gap-5 {
+    gap: 1.25rem;
+}
+/* Explanation: The gaps in a flexbox is set to be the desired value */
+
+
+
+
+/* BACKGROUND COLOR */
+/* Explanation: This section is pretty straightforward. 
+Feel free to add colors of your choices ;D*/
+
+.background-white {
+    background-color: #ffffff;
+}
+
+.background-black {
+    background-color: #000000;
+}
+
+.background-gray {
+    background-color: #e2e8f0;
+}
+
+.background-gold{
+    background-image: linear-gradient(to right, #fde68a, #eab308);
+}
+.background-silver{
+    background-image: linear-gradient(to right, #cbd5e1, #64748b);
+}
+.background-bronze{
+    background-image: linear-gradient(to right,#fb923c, #b45309); 
+}
+
+.background-crystal {
+    background-image: linear-gradient(to right,#ddd6fe, #fbcfe8); 
+
+
+}
+
+.background-orange {
+    background-color:darkorange;
+}
+
+/* TEXT COLOR */
+/* Explanation: This section is pretty straightforward. 
+Feel free to add colors of your choices ;D*/
+
+.text-white {
+    color: #ffffff;
+}
+
+.text-black {
+    color: #000000;
+}
+
+/* Font Weight */
+/* Explanation: Font weight means how THICK the text is
+i.e., 300 is thinnest & 700 is thickest */
+
+.weight-300 {
+    font-weight: 300;
+  }
+  
+.weight-400 {
+    font-weight: 400;
+}
+
+.weight-500 {
+    font-weight: 500;
+}
+
+.weight-700 {
+    font-weight: 700;
+}
+
+/* TEXT SIZE */
+/* Explanation: This section is pretty straightforward. 
+Please don't add/modify this section to maintain consistency _/\_ */
+
+.text-xs {
+    font-size: 0.75rem;
+  }
+  
+.text-sm {
+    font-size: 0.875rem;
+}
+  
+.text-base {
+    font-size: 1rem;
+}
+  
+.text-lg {
+    font-size: 1.125rem;
+}
+  
+.text-xl {
+    font-size: 1.25rem;
+}
+.text-xxl {
+    font-size: 1.875rem;
+}
+.text-3xl {
+    font-size: 3rem;
+}
+
+
+@media (min-width: 768px) {
+    .tablet\:text-xs {
+        font-size: 0.75rem;
+      }
+      
+    .tablet\:text-sm {
+        font-size: 0.875rem;
+    }
+      
+    .tablet\:text-base {
+        font-size: 1rem;
+    }
+      
+    .tablet\:text-lg {
+        font-size: 1.125rem;
+    }
+      
+    .tablet\:text-xl {
+        font-size: 1.25rem;
+    }
+    .tablet\:text-xxl {
+        font-size: 1.875rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    .pc\:text-xs {
+        font-size: 0.75rem;
+      }
+      
+    .pc\:text-sm {
+        font-size: 0.875rem;
+    }
+      
+    .pc\:text-base {
+        font-size: 1rem;
+    }
+      
+    .pc\:text-lg {
+        font-size: 1.125rem;
+    }
+      
+    .pc\:text-xl {
+        font-size: 1.25rem;
+    }
+    .pc\:text-xxl {
+        font-size: 1.875rem;
+    }
+}
+
+/* Explanation: Text size breakpoints */
+
+
+/* TEXT ALIGNMENT */
+.text-left {
+    text-align: left;
+  }
+  
+.text-center {
+    text-align: center;
+}
+  
+.text-right {
+    text-align: right;
+}
+
+
+/* MARGIN & PADDING */
+/* Explanation: MARGIN is the OUTER space of an element, while, 
+PADDING is the INNER space of an element. You can add new sizes of your choices :)
+*/
+
+.margin-all-2 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.margin-all-3 {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+}
+
+.margin-all-5 {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+}
+
+.margin-bottom-3{
+    margin-bottom: 0.75rem;
+}
+
+.margin-top-3 {
+    margin-top: 0.75rem;
+}
+
+.margin-top-5 {
+    margin-top: 1.25rem;
+}
+
+.padding-all-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.padding-all-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+.padding-all-5 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.padding-top-5 {
+    padding-top: 1.25rem;
+}
+
+.padding-y-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.padding-x-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+
+/* BORDER */
+/* Explanation: This section is pretty straightforward. 
+Feel free to add border properties of your choices ;D*/
+
+.border {
+    border-width: 1px;
+}
+
+
+/* DECORATIONS */
+
+.rounded-bg {
+    border-radius: 0.75rem;
+}
+/* Explanation: An element background is set to be rounded*/
+
+.full-rounded-bg {
+    border-radius: 9999px;
+}
+/* Explanation: An element background will be fully rounded*/
+
+
+.shadow {
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+/* Explanation: An element will drop shadow*/
+
+
+
+/* OVERFLOW */
+/* Explanation: Add a scrollbar in case the contents do overflow
+in your desired axis (x = horizontal, y = vertical) */
+
+.scroll-x {
+    overflow-x: scroll;
+}
+.scroll-y {
+    overflow-y: auto;
+}
+
+
+/* Z-INDEX */
+/* Explanation: A variable that specifies which contents 
+are placed on top of the others. This is quite similar to "Send to Top" on PowerPoint */
+
+.z-0 {
+    z-index: 0;
+}	
+.z-10 {
+    z-index: 10;
+}	
+.z-20 {
+    z-index: 20;
+}
+
+
+
+
+.block-display{
+    display: block;
+}
+
+.userbox-border{
+    border: 1px solid rgba(0, 0, 0, 2);
+}
+
+
+
+/* OPACITY */
+
+.opacity-0 {
+    opacity: 0;
+  }
+  
+  .opacity-25 {
+    opacity: 0.25;
+  }
+  
+  .opacity-50 {
+    opacity: 0.5;
+  }
+  
+  .opacity-75 {
+    opacity: 0.75;
+  }
+
+  .opacity-90 {
+    opacity: 0.90;
+  }
+  
+  .opacity-100 {
+    opacity: 1;
+  }
+
+  .backdrop-blur {
+    backdrop-filter: blur(16px);
+  }
+
+
+  /* POSITION */
+
+  .absolute {
+    position: absolute;
+  }
+  
+  .relative {
+    position: relative;
+  }
+
+  .x-1 {
+    left: 10%;
+  }
+  .x-2 {
+    left: 20%;
+  }
+  .x-3 {
+    left: 30%;
+  }
+  .x-4 {
+    left: 40%;
+  }
+  .x-5 {
+    left: 50%;
+  }
+  .x-6 {
+    left: 60%;
+  }
+  .x-7 {
+    left: 70%;
+  }
+  .x-8 {
+    left: 80%;
+  }
+
+  .y-1 {
+    top: 10%;
+  }	
+
+  .y-2 {
+    top: 20%;
+  }	
+
+  .y-3 {
+    top: 30%;
+  }	
+
+  .y-4 {
+    top: 40%;
+  }	
+
+  .y-5 {
+    top: 50%;
+  }	
+
+  .y-6 {
+    top: 60%;
+  }	
+
+  .y-7 {
+    top: 70%;
+  }	
+
+  .y-8 {
+    top: 80%;
+  }	
+
+  /* MAX HEIGHT */
+  .max-height-80 {
+    max-height: 20rem;
+  }	
+
+  .max-height-120 {
+    max-height: 30rem;
+  }	
+

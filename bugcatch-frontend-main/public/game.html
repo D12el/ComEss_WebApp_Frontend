@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Phaser -->
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3/dist/phaser.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Catch</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script type="module">
+        
+    </script>
+
+
+</head>
+<body>
+
+    <main class="flex flex-col width-full height-full padding-all-5 items-center">
+
+        <div class="flex flex-row items-start margin-top-5 width-80 tablet:width-180">
+            <div class="flex flex-col width-15 tablet:width-15 items-start justify-center gap-5">
+                <a href="index.html" class="">
+                    <div class="height-fit background-white rounded-bg padding-all-2">
+                        <img src="images/arrow-uturn-left.svg" alt="" width="30" height="30" class="">
+                    </div>
+                </a>
+            </div>
+            <div class="flex flex-col width-15 tablet:width-15 items-start justify-center gap-5">
+                <a href="game.html" class="">
+                    <div class="height-fit background-white rounded-bg padding-all-2">
+                        <img src="images/arrow-path.svg" alt="" width="30" height="30" class="">
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- <h1 class="text-black text-xxl weight-700">Bug Catch</h1> -->
+        <div class="flex flex-row width-full justify-center gap-5">
+            <!-- B.) PC leaderboard container -->
+            <div class="hidden pc:flex gap-2 flex-col width-60 height-fit background-white margin-top-5 rounded-bg border shadow padding-all-3 scroll-y">
+                <div class="width-full">
+                    <p class="text-sm weight-500">Top players</p>
+                </div>
+                <div class="flex flex-row gap-3 width-full items-center height-20 background-gray rounded-bg padding-all-2">
+                    <div class="flex height-16 width-16 background-gold full-rounded-bg items-center justify-center">
+                        <p class="weight-700 text-white text-xxl">1</p>
+                    </div>
+                    <div class="flex flex-col">
+                        <p class = "top-player-name" class ="text-lg weight-500">-</p>
+                        <p class = "top-player-score" class="text-sm weight-300">-</p>
+                    </div>
+                </div>
+                <div class="flex flex-row gap-3 width-full items-center height-20 background-gray rounded-bg padding-all-2">
+                    <div class="flex height-16 width-16 background-silver full-rounded-bg items-center justify-center">
+                        <p class="weight-700 text-white text-xxl">2</p>
+                    </div>
+                    <div class="flex flex-col">
+                        <p class = "top-player-name" class ="text-lg weight-500">-</p>
+                        <p class = "top-player-score" class="text-sm weight-300">-</p>
+                    </div>
+                </div>
+                <div class="flex flex-row gap-3 width-full items-center height-20 background-gray rounded-bg padding-all-2">
+                    <div class="flex height-16 width-16 background-bronze full-rounded-bg items-center justify-center">
+                        <p class="weight-700 text-white text-xxl">3</p>
+                    </div>
+                    <div class="flex flex-col">
+                        <p class = "top-player-name" class ="text-lg weight-500">-</p>
+                        <p class = "top-player-score" class="text-sm weight-300">-</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- <table class="hidden pc:flex flex-col width-60 height-80 background-white margin-top-5 rounded-bg border shadow padding-all-3 scroll-y" id = "leaderboard-table">
+                <thead>
+                    <tr>
+                        <th class="text-md weight-500 " colspan="3">Leaderboard</th>
+                    </tr>
+                    <tr>
+                        <th class="text-md weight-500" style="width: 10%;">rank</th>
+                        <th class="text-md weight-500" style="width: 45%;">name</th>
+                        <th class="text-md weight-500" style="width: 45%;">score</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-container">
+
+                </tbody>
+            
+            </table> -->
+
+            <div class="flex flex-col width-80 tablet:width-180">
+                <!-- A.) All devices game container -->
+                <div id="game" class="relative flex width-full height-80 tablet:height-120 background-white margin-top-5 rounded-bg border shadow padding-all-3">
+                    <!-- <div class="flex flex-row gap-3">
+                        <p id="time-label" class="text-lg weight-300">Time: 120</p>
+                        <p id="score-label" class="text-lg weight-300">Score: 0</p>
+                    </div> -->
+                    
+                    <div id="gameContainer" class=""></div>
+                    <script type="module" src="script/game.js"></script>
+                    
+                </div>
+                
+
+                <div class="flex pc:hidden flex-row width-80 tablet:width-180 gap-5">
+                    <!-- B.) Mobile & Tablet leaderboard container -->
+                    <div class="flex flex-col gap-2 width-full height-fit tablet:height-fit background-white margin-top-5 rounded-bg border shadow padding-all-3 scroll-y">
+                        <div class="width-full">
+                            <p class="text-sm weight-500">Top Players</p>
+                        </div>
+                        <div class="flex flex-row gap-3 width-full items-center height-fit background-gray rounded-bg padding-all-2">
+                            <div class="flex height-8 width-8 background-gold full-rounded-bg items-center justify-center">
+                                <p class="weight-700 text-white text-lg">1</p>
+                            </div>
+                            <div class="flex flex-col flex-wrap gap-1">
+                                <p class = "top-player-name" class="text-sm weight-500">-</p>
+                                <p class = "top-player-score" class="text-sm weight-300">-</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-row gap-3 width-full items-center height-fit background-gray rounded-bg padding-all-2">
+                            <div class="flex height-8 width-8 background-silver full-rounded-bg items-center justify-center">
+                                <p class="weight-700 text-white text-lg">2</p>
+                            </div>
+                            <div class="flex flex-col flex-wrap gap-1">
+                                <p class = "top-player-name" class="text-sm weight-500">-</p>
+                                <p class = "top-player-score" class="text-sm weight-300">-</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-row gap-3 width-full items-center height-fit background-gray rounded-bg padding-all-2">
+                            <div class="flex height-8 width-8 background-bronze full-rounded-bg items-center justify-center">
+                                <p class="weight-700 text-white text-lg">3</p>
+                            </div>
+                            <div class="flex flex-col flex-wrap gap-1">
+                                <p class = "top-player-name" class="text-sm weight-500">-</p>
+                                <p class = "top-player-score" class="text-sm weight-300">-</p>
+                            </div>
+                        </div>
+                        
+                       
+                    </div>
+                    
+                    <!-- <table class="flex flex-col width-full height-40 tablet:height-40 background-white margin-top-5 rounded-bg border shadow padding-all-3 scroll-y" id = "leaderboard-table-mobile">
+                        <thead>
+                            <tr>
+                                <th class="text-md weight-500 " colspan="3">Leaderboard</th>
+                            </tr>
+                            <tr>
+                                <th class="text-md weight-500" style="width: 10%;">rank</th>
+                                <th class="text-md weight-500" style="width: 45%;">name</th>
+                                <th class="text-md weight-500" style="width: 45%;">score</th>
+                            </tr>
+                        </thead>
+                        <tbody id="leaderboard-container-mobile">
+        
+                        </tbody> 
+                    </table> -->
+                    <!-- C.) Mobile & Tablet userinfo container -->
+                    <div class="flex flex-col width-full height-40 tablet:height-40 background-white margin-top-5 rounded-bg border shadow padding-all-2">
+                        <div class="width-full">
+                            <p class="text-sm weight-500">Me</p>
+                        </div>
+                        <div class="flex flex-row width-full height-full gap-1">
+                            <div class="flex width-16 height-16 background-white full-rounded-bg margin-top-3">
+                                <img id="avatar-mobile" src="images/Avatar.png" alt="" style="height: 100%; width: 100%; padding: 12%;" >
+                            </div>
+                            <div class="flex flex-col width-fit height-fit">
+                                <p id="usertext-mobile" class="text-sm weight-500 margin-top-5">username</p>
+                                <p id="highscore-label-mobile" class="text-xs weight-500 margin-top-1">Best: 0</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+
+
+
+            <!-- C.) PC userinfo container -->
+            <div class="hidden pc:flex flex-col width-60 height-40 background-white margin-top-5 rounded-bg border shadow padding-all-3">
+                <div class="width-full">
+                    <p class="text-sm weight-500">Me</p>
+                </div>
+                <div class="flex flex-row width-full height-full gap-1">
+                    <div id="profile-table" class="flex width-18 height-18 background-white full-rounded-bg margin-top-3">
+                        <img id="avatar-pc" src="images/Avatar.png" alt="" style="height: 100%; width: 100%; padding: 12%;" >
+                    </div>
+                    <div class="flex flex-col width-fit height-fit">
+                        <p id="usertext-pc" class="text-base weight-500 margin-top-5">username</p>
+                        <p id="highscore-label-pc" class="text-base weight-500 margin-top-1">Best: 0</p>
+                    </div>
+                </div>
+
+            </div> 
+
+        </div>
+        <div class="">
+
+        </div>
+        
+    
+    
+    
+    
+    </main>
+
+    <script type="module">
+
+
+        import { getUsername, getCurrentAvatarImg, getHighScore,fetchAndDrawLeaderboard} from "/script/main.js";
+        // import { startGame } from "/script/game.js";
+
+        window.getUsername = getUsername;
+        window.getCurrentAvatarImg = getCurrentAvatarImg;
+        // window.startGame = startGame;
+        window.getHighScore = getHighScore;
+        fetchAndDrawLeaderboard()
+
+        
+
+        const userLabelPC = document.getElementById("usertext-pc");
+        const userLabelMobile = document.getElementById("usertext-mobile");
+        const highScoreLabelMobile = document.getElementById("highscore-label-mobile");
+        const highScoreLabelPC = document.getElementById("highscore-label-pc");
+
+        userLabelPC.innerHTML = getUsername();
+        userLabelMobile.innerHTML = getUsername();
+        highScoreLabelMobile.innerHTML = "Best: " + getHighScore();
+        highScoreLabelPC.innerHTML = "Best: " + getHighScore();
+
+
+        const avatarPC = document.getElementById("avatar-pc");
+        const avatarMobile = document.getElementById("avatar-mobile");
+        console.log(getCurrentAvatarImg());
+        avatarPC.src = getCurrentAvatarImg();
+        avatarMobile.src = getCurrentAvatarImg();
+
+        // startGame();
+
+    </script>
+
+</body>
+</html>
+
+

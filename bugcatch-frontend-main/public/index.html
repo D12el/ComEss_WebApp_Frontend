@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Catch</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script type="module">
+        import { getUsername, getAvatarId, setAvatarId, handleDivClick, handlePlayClick, initSelectedAvatar } from "/script/main.js";
+        window.getUsername = getUsername;
+        window.getAvatarId = getAvatarId;
+        window.setAvatarId = setAvatarId;
+        window.handleDivClick = handleDivClick;
+        window.handlePlayClick = handlePlayClick;
+        window.initSelectedAvatar = initSelectedAvatar;
+    </script>
+</head>
+<body>
+
+    
+    <main class="flex flex-col width-full height-full padding-all-5 items-center">
+        
+        
+        
+        <h1 class="font-luckiest text-black text-3xl weight-700 margin-top-5">Bug Catch</h1>
+        <div class="flex flex-col width-full items-center justify-center gap-5">
+
+
+            <div class="flex flex-col items-center width-80 tablet:width-180 height-fit tablet:height-fit background-white margin-top-5 rounded-bg border shadow padding-all-5">
+                
+
+                <div class="flex flex-row items-center justify-center">
+                    <div class="">
+                        <img class="width-10" src="images/bug-logo.png" alt="">
+                    </div>
+                    <div class="flex flex-col tablet:width-170 height-fit tablet:height-40 rounded-bg border  padding-all-3 items-center">
+                        <p class="text-xl tablet:text-xxl weight-400">Welcome to Bug Catch</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center gap-3">
+                    <p class="text-md weight-300">Pick your avatar</p>
+                    <div class="flex flex-col gap-2">
+                        <div class="flex flex-row gap-2">
+                            <img id="avatar-1" class="opacity-25 width-16 tablet:width-28 height-16 tablet:height-28" src="images/avatars/1.png" alt="" onclick=handleDivClick(this)>
+                            <img id="avatar-2" class="opacity-25 width-16 tablet:width-28 height-16 tablet:height-28" src="images/avatars/2.png" alt="" onclick=handleDivClick(this)>
+                            <img id="avatar-3" class="opacity-25 width-16 tablet:width-28 height-16 tablet:height-28" src="images/avatars/3.png" alt="" onclick=handleDivClick(this)>
+                            <img id="avatar-4" class="opacity-25 width-16 tablet:width-28 height-16 tablet:height-28" src="images/avatars/4.png" alt="" onclick=handleDivClick(this)>
+
+                            <!-- <div id="avatar-1" class="flex width-16 tablet:width-28 height-16 tablet:height-28 background-gray full-rounded-bg" onclick=handleDivClick(this)>
+                            </div>
+                            <div id="avatar-2" class="flex width-16 tablet:width-28 height-16 tablet:height-28 background-gray full-rounded-bg" onclick=handleDivClick(this)>
+                            </div>
+                            <div id="avatar-3" class="flex width-16 tablet:width-28 height-16 tablet:height-28 background-gray full-rounded-bg" onclick=handleDivClick(this)>
+                            </div>
+                            <div id="avatar-4" class="flex width-16 tablet:width-28 height-16 tablet:height-28 background-gray full-rounded-bg" onclick=handleDivClick(this)>
+                            </div> -->
+                        </div>
+                        <div class="flex flex-row gap-2">
+                            <img id="avatar-5" class="opacity-25 width-16 tablet:width-28 height-16 tablet:height-28" src="images/avatars/5.png" alt="" onclick=handleDivClick(this)>
+                            <img id="avatar-6" class="opacity-25 width-16 tablet:width-28 height-16 tablet:height-28" src="images/avatars/6.png" alt="" onclick=handleDivClick(this)>
+                            <img id="avatar-7" class="opacity-25 width-16 tablet:width-28 height-16 tablet:height-28" src="images/avatars/7.png" alt="" onclick=handleDivClick(this)>
+                            <img id="avatar-8" class="opacity-25 width-16 tablet:width-28 height-16 tablet:height-28" src="images/avatars/8.png" alt="" onclick=handleDivClick(this)>
+                            <!-- <div id="avatar-5" class="flex width-16 tablet:width-28 height-16 tablet:height-28 background-gray full-rounded-bg" onclick=handleDivClick(this)>
+                            </div>
+                            <div id="avatar-6" class="flex width-16 tablet:width-28 height-16 tablet:height-28 background-gray full-rounded-bg" onclick=handleDivClick(this)>
+                            </div>
+                            <div id="avatar-7" class="flex width-16 tablet:width-28 height-16 tablet:height-28 background-gray full-rounded-bg" onclick=handleDivClick(this)>
+                            </div>
+                            <div id="avatar-8" class="flex width-16 tablet:width-28 height-16 tablet:height-28 background-gray full-rounded-bg" onclick=handleDivClick(this)>
+                            </div> -->
+                        </div>
+                    </div>
+                    <input class="width-full text-xl rounded-bg padding-all-2" id="username-input" type="text" placeholder="Username">
+                    
+                </div>
+                
+
+                    <div style="cursor: pointer" onClick="handlePlayClick()" id="play-button" class="margin-top-5 flex flex-col width-fit height-fit background-white margin-top-3 rounded-bg border  padding-y-3 padding-x-5 items-center justify-center background-orange">
+                        <p class="text-xl tablet:text-xxl weight-400">Play</p>
+                    </div>
+                    
+                </div>
+
+                <!-- <div class="flex flex-row tablet:width-180 height-fit tablet:height-40 margin-top-3 rounded-bg border padding-all-3 items-center margin-bottom-3 gap-1" >
+                    <div class="flex flex-col width-60 tablet:width-fit height-fit tablet:height-40 margin-top-3 rounded-bg border padding-all-3 items-end">
+                        <a href="tutorial.html" class="">
+                            <p class="text-xs weight-500">Game tutorial</p>
+                        </a>
+                        <a href="leaderboard.html" class="">
+                            <p class="text-xs weight-500">See leaderboard</p>
+                        </a>
+                    </div>
+                    
+                </div> -->
+
+            
+            </div> 
+            <div class="flex flex-row items-center justify-between width-80 tablet:width-180 height-fit tablet:height-fit margin-top-5 rounded-bg border">
+                <div class="flex flex-row gap-2">
+                    <a href="tutorial.html" class="">
+                        <div class="rounded-bg shadow height-fit width-fit background-white padding-all-3 text-sm tablet:text-lg weight-300">Tutorial</div>
+                    </a>
+                    <a href="leaderboard.html" class="">
+                        <div class="rounded-bg shadow height-fit width-fit background-white padding-all-3 text-sm tablet:text-lg weight-300">Leaderboard</div>
+                    </a>
+                </div>
+                
+                <p class="weight-500 text-xs tablet:text-lg">by CEE Group 25/2023</p>
+                
+
+
+
+            </div>
+
+            
+            
+
+        </div>    
+    
+    
+        <script type="module">
+            document.getElementById("username-input").value = getUsername();
+            initSelectedAvatar();
+        </script>
+
+    </main>
+
+      
+
+</body>
+</html>
