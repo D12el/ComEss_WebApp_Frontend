@@ -2,7 +2,7 @@
 
 A simple frontend server built with Express.js, serving static files from the public/ directory.
 
-🚀 Features
+# Features
 
 Static file hosting with Express
 
@@ -10,7 +10,7 @@ Ready for deployment or local development
 
 Lightweight configuration
 
-📦 Installation
+# Installation
 
 Clone the repository and install dependencies:
 
@@ -18,7 +18,7 @@ git clone <repo-url>
 cd bugcatch-frontend-main
 npm install
 
-▶️ Usage
+# Usage
 
 Start the server with:
 
@@ -32,29 +32,7 @@ http://localhost:3221
 
 Static files will be served from the public/ directory.
 
-📂 Project Structure
-bugcatch-frontend-main/
-│
-├── public/          # Place your index.html and other static files here
-├── server.js        # Express server entry point
-├── package.json     # Project configuration
-└── README.md        # Documentation
-
-🌐 Deployment
-
-Since this project uses Express, it is not suitable for GitHub Pages (which only hosts static files).
-You can deploy to platforms that support Node.js such as:
-
-Render
-
-Railway
-
-Heroku
-
-Vercel
- (with Node server config)
-
-🔧 Development Notes
+# Development Notes
 
 Place your frontend build/static files in the public/ folder (e.g., index.html, CSS, JS).
 
