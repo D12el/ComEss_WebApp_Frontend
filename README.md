@@ -17,20 +17,20 @@ Ready for both local development and deployment
 
 Clone the repository and install dependencies:
 
-git clone <repo-url>
-cd bugcatch-frontend-main
-npm install
+- git clone <repo-url>
+- cd bugcatch-frontend-main
+- npm install
 
 # Usage
 
 Start the server with:
 
-npm start
+- npm start
 
 
 The server will run at:
 
-http://localhost:3221
+- http://localhost:3221
 
 
 Static files will be served from the public/ directory.
