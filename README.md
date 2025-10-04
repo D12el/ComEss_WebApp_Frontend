@@ -1,4 +1,4 @@
-bugcatch-frontend
+# bugcatch-frontend
 
 A simple frontend server built with Express.js, serving static files from the public/ directory.
 
