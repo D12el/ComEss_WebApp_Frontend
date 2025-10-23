@@ -16,6 +16,7 @@ Ready for both local development and deployment
 
 Clone the repository and install dependencies:
 
+Bash
 - git clone <repo-url>
 - cd bugcatch-frontend-main
 - npm install
