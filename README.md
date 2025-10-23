@@ -25,7 +25,7 @@ Bash
 
 Start the server with:
 
-- npm start
+- npm run start
 
 
 The server will run at:
